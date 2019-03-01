@@ -20,7 +20,7 @@ module.exports = {
         pathRewrite: {'^/musicapi': ''}
       }
     },
-    host: '192.168.1.21', // can be overwritten by process.env.HOST
+    host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
