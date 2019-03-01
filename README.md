@@ -1,5 +1,11 @@
 ### 飞飞音乐网（webApp）
 
+####技术栈
+* Vue2.0 控制数据及视图
+* Axios  网络请求
+* Vue-router 路由管理
+
+
 [观看Demo](http://feifei.ink)
 ---
 
