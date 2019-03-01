@@ -2,9 +2,9 @@
 [观看Demo](http://feifei.ink)
 ---
 #### 技术栈
-* Vue2.0&nbsp;&nbsp;&nbsp;**控制数据及视图**
-* Axios&nbsp;&nbsp;&nbsp;&nbsp;**网络请求数据**
-* Vue-router&nbsp;&nbsp;&nbsp;**路由管理**
+* Vue2.5&nbsp;&nbsp;&nbsp;**控制数据及视图**
+* axios&nbsp;&nbsp;&nbsp;&nbsp;**网络请求数据**
+* vue-router&nbsp;&nbsp;&nbsp;**路由管理**
 * vue-aplayer&nbsp;&nbsp;**音乐播放组件**
 * element-ui&nbsp;&nbsp;&nbsp;**UI框架**
 * vue-lazyload&nbsp;&nbsp;**懒加载减少性能开销**
