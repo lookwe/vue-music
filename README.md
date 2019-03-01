@@ -1,9 +1,12 @@
 ### 飞飞音乐网（webApp）
 
-####技术栈
-* Vue2.0 控制数据及视图
-* Axios  网络请求
-* Vue-router 路由管理
+#### 技术栈
+* Vue2.0  控制数据及视图
+* Axios   网络请求数据
+* Vue-router  路由管理
+* vue-aplayer  音乐播放组件
+* element-ui   UI框架
+* vue-lazyload  懒加载减少性能开销
 
 
 [观看Demo](http://feifei.ink)
