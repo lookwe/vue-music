@@ -65,7 +65,7 @@
            },
         },
         created(){
-          let url =this.musicapi + `/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.search.merge&query=${this.$route.params.query}&page_size=20&page_no=0&type=0,1,2,5,7`
+          let url = this.musicapi + `/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.search.merge&query=${this.$route.params.query}&page_size=20&page_no=0&type=0,1,2,5,7`
           this.$axios.get(url)
             .then(res =>{
               if(res.data.error_code === 22000){
