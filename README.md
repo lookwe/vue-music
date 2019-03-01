@@ -29,7 +29,7 @@
 
 &ensp;&ensp;9.**歌曲排名...**
 
-![图片](http://i1.bvimg.com/677841/164a76bd90932c67.png)![图片](http://i1.bvimg.com/677841/43a83b7b21103ad3.png)
+![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
 
 
 ### Build Setup
