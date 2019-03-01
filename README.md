@@ -2,7 +2,7 @@
 
 #### 技术栈
 * Vue2.0&nbsp;&nbsp;&nbsp;控制数据及视图
-* Axios&nbsp;&nbsp;&nbsp;网络请求数据
+* Axios&nbsp;&nbsp;&nbsp;&nbsp;网络请求数据
 * Vue-router  路由管理
 * vue-aplayer  音乐播放组件
 * element-ui   UI框架
