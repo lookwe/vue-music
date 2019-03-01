@@ -27,22 +27,17 @@
 
 8.**歌手筛选**
 
-9.**歌曲排名**
-10 **...**
+9.**歌曲排名...**
 
 ![图片](http://i1.bvimg.com/677841/164a76bd90932c67.png)![图片](http://i1.bvimg.com/677841/43a83b7b21103ad3.png)
 
 
-> muics web
-
 ### Build Setup
-
 
 ### install dependencies
 ```
 npm install
 ```
-
 
 
 ### serve with hot reload at localhost:8080
