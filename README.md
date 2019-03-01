@@ -4,9 +4,9 @@
 #### 技术栈
 * Vue2.0&nbsp;&nbsp;&nbsp;**控制数据及视图**
 * Axios&nbsp;&nbsp;&nbsp;&nbsp;**网络请求数据**
-* Vue-router&nbsp;&nbsp;**路由管理**
+* Vue-router&nbsp;&nbsp;&nbsp;**路由管理**
 * vue-aplayer&nbsp;&nbsp;**音乐播放组件**
-* element-ui&nbsp;&nbsp;**UI框架**
+* element-ui&nbsp;&nbsp;&nbsp;**UI框架**
 * vue-lazyload&nbsp;&nbsp;**懒加载减少性能开销**
 * 野狗通信云&nbsp;&nbsp;**提供第三方实时通信服务**
 * 自定义组件&nbsp;&nbsp;&nbsp;**实现模块化开发**
@@ -29,8 +29,7 @@
 
 &ensp;&ensp;9.**歌曲排名...**
 
-![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433104x2890174040.png)
-
+![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
 
 ### Build Setup
 
