@@ -3,11 +3,11 @@
 #### 技术栈
 * Vue2.0&nbsp;&nbsp;&nbsp;控制数据及视图
 * Axios&nbsp;&nbsp;&nbsp;&nbsp;网络请求数据
-* Vue-router  路由管理
-* vue-aplayer  音乐播放组件
-* element-ui   UI框架
-* vue-lazyload  懒加载减少性能开销
-* 野狗通信云  提供第三方实时通信服务
+* Vue-router&nbsp;&nbsp;路由管理
+* vue-aplayer&nbsp;&nbsp;音乐播放组件
+* element-ui&nbsp;&nbsp;UI框架
+* vue-lazyload&nbsp;&nbsp;懒加载减少性能开销
+* 野狗通信云&nbsp;&nbsp;提供第三方实时通信服务
 
 [观看Demo](http://feifei.ink)
 ---
