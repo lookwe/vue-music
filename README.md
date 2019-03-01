@@ -7,7 +7,7 @@
 * vue-aplayer  音乐播放组件
 * element-ui   UI框架
 * vue-lazyload  懒加载减少性能开销
-
+* 野狗通信云  提供第三方实时通信服务
 
 [观看Demo](http://feifei.ink)
 ---
