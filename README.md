@@ -1,5 +1,5 @@
 ### 飞飞音乐网（webApp）
-[观看Demo](http://feifei.ink)
+[观看网站](http://feifei.ink)
 ---
 #### 技术栈
 * Vue2.5&nbsp;&nbsp;&nbsp;**控制数据及视图**
