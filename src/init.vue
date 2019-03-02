@@ -1,13 +1,29 @@
 <template>
 <div class="init">
   <keep-alive :include="['songSheet','songlists','singer']">
-     <router-view></router-view>
+     <router-view @cutter="getCutter"></router-view>
   </keep-alive>
 </div>
 </template>
 <script>
 export default {
   name:'init',
+  methods:{
+    getCutter(val){
+      this.cutter = val
+    }
+  },
+  watch:{
+    $route(to,from){
+      if(from.name === 'login'){
+        if(this.cutter==='register'){
+          this.$router.push({name:'user'})
+          //失效
+          delete this.cutter
+        }
+      }
+    },
+  },
 }
 </script>
 

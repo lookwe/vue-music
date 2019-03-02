@@ -129,7 +129,7 @@ export default {
       if (this.ingress){
         this.userHas().then(flay=>{
           if (!flay){
-              this.addUser()
+            this.addUser()
           }
         })
       }
@@ -149,6 +149,9 @@ export default {
       )
     }
 
+  },
+  beforeDestroy(){
+    this.$emit('cutter','register')
   },
   computed:{
     longBoxStyle(){

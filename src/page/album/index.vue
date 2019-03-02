@@ -131,15 +131,15 @@
       getDate() {
         let url = `${this.musicapi}/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.album.getAlbumInfo&album_id=${this.album_id}`
         this.$axios.get(url).then(res =>{
-         if(res.data.error_code===undefined){
-           this.songlist = res.data.songlist
-           this.albumInfo = {
-             share_pic:res.data.share_pic,
-             title: res.data.share_title,
-             author:res.data.albumInfo.author,
-             publishtime:res.data.albumInfo.publishtime,
-             language:res.data.albumInfo.language,
-             songs_total:res.data.albumInfo.songs_total
+          if(res.data.error_code !== 22001){
+            this.songlist = res.data.songlist;
+            this.albumInfo = {
+              share_pic:res.data.share_pic,
+              title: res.data.share_title,
+              author:res.data.albumInfo.author,
+              publishtime:res.data.albumInfo.publishtime,
+              language:res.data.albumInfo.language,
+              songs_total:res.data.albumInfo.songs_total
           }
          }
         }).catch(e=>{

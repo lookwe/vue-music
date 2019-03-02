@@ -150,10 +150,10 @@ export default {
           center: true,
           showClose: true,
           duration:'2000',
-          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
+          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://localhost:8080/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
+          /*http://feifei.ink/#/login*/
         });
       }
-
     },
     judgeUserOnLine(){
       return this.user == undefined ? false : true
@@ -251,7 +251,7 @@ export default {
     }
   },
   created(){
-    this.loadData()
+    this.loadData();
     if (this.judgeUserOnLine()){
       ref.child(this.user + '/songs').once('value').then(res=>{
         this.likeSongs = [...res.val() || []]

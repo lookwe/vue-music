@@ -101,8 +101,8 @@
             this.showMsg('登录成功','success');
             sessionStorage.setItem('user',res.val()['name']);
             let phone = res.val()['phone'];
-            sessionStorage.setItem('phone',(phone.slice(0, 3) + '****' + phone.slice(7, 11)));
-            this.$router.push({name:'user'});
+            sessionStorage.setItem('phone',(phone.slice(0, 3) + '****' + phone.slice(7, 11)))
+            this.$router.go('-1')
           }else {
             this.formData.password = '';
             this.$message.error({
