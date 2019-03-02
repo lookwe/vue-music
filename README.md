@@ -1,9 +1,11 @@
 ### 飞飞音乐网（webApp）
 
 > **前言**&nbsp;&nbsp;为了能更方便的打代码听音乐。利用了工作之余的时间开发出了此webApp并开源,使用技术如下：
+---
 
 [观看网站](http://feifei.ink)
 ---
+
 #### 技术栈
 * Vue2.5&nbsp;&nbsp;&nbsp;**控制数据及视图**
 * axios&nbsp;&nbsp;&nbsp;&nbsp;**网络请求数据**
