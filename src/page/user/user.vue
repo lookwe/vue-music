@@ -13,7 +13,7 @@
            </div>
            <label @click="logout">注销</label>
          </div>
-         <router-link v-else tag="span" to="/logn" class="login-span">单击登录</router-link>
+         <router-link v-else tag="span" to="/login" class="login-span">单击登录</router-link>
          <popup
            :popup="popup"
            @hidePopup="hidePopup"
@@ -50,7 +50,7 @@
 
        <div class="switch-box">
          <div class="user-default" v-if="isNotUser">
-           <p >请先 <router-link tag="span" to="/logn" class="tip-span">登录</router-link> 后查看收藏吧✧*｡٩(ˊᗜˋ*)و✧*｡</p>
+           <p >请先 <router-link tag="span" to="/login" class="tip-span">登录</router-link> 后查看收藏吧✧*｡٩(ˊᗜˋ*)و✧*｡</p>
          </div>
          <div class="content" v-else>
            <div class="user-default" v-if="contentDefault">
@@ -192,7 +192,7 @@ export default {
       this.isNotUser = true
     },
     exit(){
-      this.$router.push({path:'/logn'})
+      this.$router.push({path:'/login'})
     },
     showPopup(){
       this.popup.isShowPopup = true

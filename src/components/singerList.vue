@@ -12,29 +12,29 @@
 </template>
 
 <script>
-  export default {
-    name:'singerList',
-    data(){
-      return {
-        singers:[]
-      }
-    },
-    props:{
-      songTid:{
-        type:String,
-        default:'2517'
-      }
-    },
-    created(){
-      let SongUrl =this.musicapi + '/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.artist.recommendArtist&ting_uid='+this.songTid+'&num=6'
-      this.$axios.get(SongUrl)
-        .then(res => {
-          this.singers = res.data.result.list;
-        }).catch(error => {
-        console.log(error);
-      })
+export default {
+  name:'singerList',
+  data(){
+    return {
+      singers:[]
     }
+  },
+  props:{
+    songTid:{
+      type:String,
+      default:'2517'
+    }
+  },
+  created(){
+    let SongUrl =this.musicapi + '/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.artist.recommendArtist&ting_uid='+this.songTid+'&num=6'
+    this.$axios.get(SongUrl)
+      .then(res => {
+        this.singers = res.data.result.list;
+      }).catch(error => {
+      console.log(error);
+    })
   }
+}
 </script>
 
 <style scoped>

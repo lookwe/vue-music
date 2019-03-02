@@ -17,7 +17,7 @@
               trigger="manual"
               :content="content"
               v-model="visible">
-              <div slot="reference" class="care" @click="handlerCare">
+              <div slot="reference" class="care" @click="handlerCare" v-if="singer.name">
                 <i :class="['like',icon]"></i>
               </div>
             </el-popover>
@@ -98,7 +98,7 @@ export default {
           center: true,
           showClose: true,
           duration:'2000',
-          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/logn">去登陆吧(´･･)ﾉ(._.`)</a>'
+          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
         });
       }else {
         this.visible = !this.visible
@@ -136,7 +136,6 @@ export default {
         },800)
       }
     },
-
   },
   components:{
     searchNav,

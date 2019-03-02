@@ -24,78 +24,71 @@
 </template>
 
 <script>
-  import Aplayer from 'vue-aplayer'
-  export default {
-    name:'footerMusic',
-    components:{
-      'a-player':Aplayer
+import Aplayer from 'vue-aplayer'
+export default {
+  name:'footerMusic',
+  components:{
+    'a-player':Aplayer
+  },
+  methods:{
+    closeMusic(){
+      this.$emit('close_music',false)
     },
-    methods:{
-      closeMusic(){
-        this.$emit('close_music',false)
-      },
-      handleSongInfo(){
-        let currentTime = this.$refs.player.audio.currentTime
-        let song_id = ''
-        if(this.musicList.length > 0){
-          let title =this.$el.querySelector('.aplayer-music .aplayer-title').innerHTML
-          song_id = this.musicList.find(item=>{
-            return item.title == title
-          })['songId'];
-        }else {
-          song_id = this.music.songId
-        }
-        this.$router.push({name:'playMany',params:{song_id:song_id,currentTime:currentTime+0.0099}})
-        this.closeMusic()
+    handleSongInfo(){
+      let currentTime = this.$refs.player.audio.currentTime
+      let song_id = ''
+      if(this.musicList.length > 0){
+        let title =this.$el.querySelector('.aplayer-music .aplayer-title').innerHTML
+        song_id = this.musicList.find(item=>{
+          return item.title == title
+        })['songId'];
+      }else {
+        song_id = this.music.songId
       }
-    },
-    //js 中的状态被改变时候触发
-    updated(){
-      let shot = this;
-      if (this.isLoad === true){
-        if (shot.$refs.player !== undefined){
-            shot.$refs.player.audio.play()
-            shot.$refs.player.audio.currentTime = this.currentTime
-        }
-      }
-    },
-    props:{
-      music:{
-        type:Object,
-        default:function () {
-            return {
-              src: "http://zhangmenshiting.qianqian.com/data2/music/2ac9a48039bec6be68c7768f13567441/598741361/598741361.mp3?xcode=a648ffb1c31aa53d7ed60eb536e08c87",
-              title: '无敌前端',
-              artist: '黄忠飞',
-              pic: "http://qukufile2.qianqian.com/data2/pic/2854c6d30aab478cec599a174c911eea/598740687/598740687.jpg@s_1,w_300,h_300",
-              songId:'21'
-            }
-        }
-      },
-      isLoad:{
-        type:Boolean,
-        default:false
-      },
-      musicList:{
-        type:Array,
-        default:function () {
-          return []
-        }
-      },
-      musicShowL:{
-        type:Boolean,
-        default:false
-      },
-      muted:{
-        type:Boolean,
-        default:false
-      },
-      currentTime:{
-        type:Number,
-        default:0
+      this.$router.push({name:'playMany',params:{song_id:song_id,currentTime:currentTime+0.0099}})
+      this.closeMusic()
+    }
+  },
+  //js 中的状态被改变时候触发
+  updated(){
+    if (this.isLoad === true){
+      if (this.$refs.player !== undefined){
+         this.$refs.player.audio.play()
+         this.$refs.player.audio.currentTime = this.currentTime
       }
     }
+  },
+  props:{
+    music:{
+      type:Object,
+      default:function () {
+        return {}
+      }
+    },
+    isLoad:{
+      type:Boolean,
+      default:false
+    },
+    musicList:{
+      type:Array,
+      default:function () {
+        return []
+      }
+    },
+    musicShowL:{
+      type:Boolean,
+      default:false
+    },
+    muted:{
+      type:Boolean,
+      default:false
+    },
+    currentTime:{
+      type:Number,
+      default:0
     }
+  }
+}
 </script>
 
 <style scoped>

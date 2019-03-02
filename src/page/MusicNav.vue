@@ -34,36 +34,34 @@
 </template>
 
 <script>
-    export default {
-        data(){
-            return {
-              titerLeft:0
-            }
-        },
-        methods:{
-          titer(val,url){
-            this.titerLeft = val
-            this.$router.push({name:url})
-          },
-          getmusic(obj){
-            this.$emit('get_music',obj)
-          },
-
-        },
-        watch:{
-          $route(to,from){
-            if(to === '/Hot'){
-              this.titerLeft = 0
-            }else if(to === '/New'){
-              this.titerLeft = 1
-            }else if(to === '/Classic'){
-              this.titerLeft = 2
-            }
-          }
-        },
-
-
+export default {
+  data(){
+    return {
+      titerLeft:0
     }
+  },
+  methods:{
+    titer(val,url){
+      this.titerLeft = val
+      this.$router.push({name:url})
+    },
+    getmusic(obj){
+      this.$emit('get_music',obj)
+    },
+
+  },
+  watch:{
+    $route(to,from){
+      if(to === '/Hot'){
+        this.titerLeft = 0
+      }else if(to === '/New'){
+        this.titerLeft = 1
+      }else if(to === '/Classic'){
+        this.titerLeft = 2
+      }
+    }
+  },
+}
 </script>
 
 <style scoped>

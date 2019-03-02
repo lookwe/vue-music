@@ -82,7 +82,6 @@
 <style scoped>
 .song-img{
   width: 100%;
-
 }
 .song-img span{
   display: inline-block;

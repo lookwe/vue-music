@@ -85,9 +85,7 @@ export default {
       });
       let ids  = this.song_list.slice(ind,this.song_list.length).map(item=>{return item.song_id })
       this.getAllMusic(ids,true)
-
     },
-
     pullUp(){
       if(this.isPullUp){
         this.offset += 12

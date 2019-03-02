@@ -26,7 +26,7 @@
                 <p class="time">
                   <span class="c-gray">发行日期：</span>
                   {{albumInfo.publishtime}}
-                  <i :class="[defaultIcon,'like']" @click="userClickLike"></i>
+                  <i v-if="albumInfo.author" :class="[defaultIcon,'like']" @click="userClickLike"></i>
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@
                 <div class="info">
                   <div class="line1">
                     <span class="name">{{item.title}}</span>&nbsp;
-                    <img v-lazy='"http://i2.bvimg.com/677841/889e31e7d08f06d7t.jpg"' width="14px"/>
+                    <img v-lazy='"http://thyrsi.com/t6/675/1551429593x2890173891.png"' width="14px"/>
                   </div>
                   <span class="author">{{item.author}}</span>
                 </div>
@@ -131,16 +131,17 @@
       getDate() {
         let url = `${this.musicapi}/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.album.getAlbumInfo&album_id=${this.album_id}`
         this.$axios.get(url).then(res =>{
-          this.songlist = res.data.songlist
-          this.albumInfo = {
-            share_pic:res.data.share_pic,
-            title: res.data.share_title,
-            author:res.data.albumInfo.author,
-            publishtime:res.data.albumInfo.publishtime,
-            language:res.data.albumInfo.language,
-            songs_total:res.data.albumInfo.songs_total
+         if(res.data.error_code===undefined){
+           this.songlist = res.data.songlist
+           this.albumInfo = {
+             share_pic:res.data.share_pic,
+             title: res.data.share_title,
+             author:res.data.albumInfo.author,
+             publishtime:res.data.albumInfo.publishtime,
+             language:res.data.albumInfo.language,
+             songs_total:res.data.albumInfo.songs_total
           }
-
+         }
         }).catch(e=>{
           console.log(e);
         })
@@ -159,7 +160,7 @@
             center: true,
             showClose: true,
             duration:'2000',
-            message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/logn">去登陆吧(´･･)ﾉ(._.`)</a>'
+            message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
           });
         }
       },

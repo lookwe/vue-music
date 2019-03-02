@@ -24,12 +24,12 @@
     data(){return {todayData:[]}},
     props:{song_id:{type:String, default:''}},
     created(){
-      let todayUrl = this.HOST + '/v2/restserver/ting?method=baidu.ting.song.getRecommandSongList&song_id=8&num=6'
+     let todayUrl = this.musicapi + '/v1/restserver/ting?method=baidu.ting.song.getRecommandSongList&song_id=1&num=6'
       this.$axios.get(todayUrl)
         .then(res => {
           this.todayData = res.data.result.list;
         }).catch(error => {
-        console.log(error);
+         console.log(error);
       })
     }
   }

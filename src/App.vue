@@ -54,8 +54,7 @@
         musicShowL:false,
         //静音
         muted:false,
-        currentTime:0,
-        randomSong:[]
+        currentTime:0
       }
     },
     components:{
@@ -89,12 +88,15 @@
       },
 
       mapMusic(data){
-        let music = {
-          src: data.bitrate.file_link || data.bitrate.show_link,
-          title: data.songinfo.title,
-          artist: data.songinfo.author,
-          pic: data.songinfo.pic_radio,
-          songId:data.songinfo.song_id
+        let music = null;
+        if(data){
+          music = {
+            src: data.bitrate.file_link || data.bitrate.show_link,
+            title: data.songinfo.title,
+            artist: data.songinfo.author,
+            pic: data.songinfo.pic_radio,
+            songId:data.songinfo.song_id
+          }
         }
         return music
       },
@@ -107,21 +109,23 @@
           this.isRouterAlive = true
         })
       },
-      async getMusics(){
+
+      //点击随机播放
+      getMusics(){
         let url = this.musicapi +  '/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.radio.getChannelSong&channelname=public_tuijian_suibiantingting&version=2.1'
-        await this.$axios.get(url).then(res =>{
+        this.$axios.get(url).then(res =>{
            if(res.data.error_code===22000){
-             this.randomSong = res.data.result.songlist.splice(1,9).map((item)=>{
+             let randomSongIds = res.data.result.songlist.splice(0,10).map((item)=>{
                return item.songid
              })
-             this.getAllMusic(this.randomSong,true)
+             this.getAllMusic(randomSongIds,true)
            }
          })
       },
 
       /*
       * 并发请求歌曲并转入播放组件
-      * 参数 ： ['2415','23562','245421'....] , autoPlay选取第一项为首播
+      * 参数 songs = 歌曲ID数组 , autoPlay = 是否选取第一项为首播
       * */
       getAllMusic(songs,autoPlay=false){
         if(songs.length>30)songs.splice(30,songs.length);
@@ -137,14 +141,25 @@
         })
 
         this.$axios.all(promiseArr).then(this.$axios.spread((...args)=>{
-          this.musicList = args.map(item=>{
-            let music = this.mapMusic(item.data)
+          let songList = args.map(item=>{
+            let music = null
+            if(item.data.error_code !== 22469){
+              return music = this.mapMusic(item.data)
+            }else {
+              this.$message({
+                message: '歌曲版权原因以下架~请其他的吧',
+                type: 'warning',
+                center: true,
+                showClose: true,
+              });
+            }
             return music
-          })
-          if (autoPlay){
-            this.getMusic(this.musicList[0])
-            loading.close();
+          });
+          if (songList.length >0){
+            this.musicList = songList.filter(item => {return item});
+            if (autoPlay)this.getMusic(this.musicList[0]);
           }
+          loading.close();
         }))
       },
 

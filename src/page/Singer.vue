@@ -17,13 +17,13 @@
 </template>
 
 <script>
-   import singerlist from '../components/singerList'
-    export default {
-        name:'singer',
-        components:{
-          singerlist
-        }
+ import singerlist from '../components/singerList'
+ export default {
+    name:'singer',
+    components:{
+      singerlist
     }
+ }
 </script>
 
 <style scoped>

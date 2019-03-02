@@ -150,7 +150,7 @@ export default {
           center: true,
           showClose: true,
           duration:'2000',
-          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/logn">去登陆吧(´･･)ﾉ(._.`)</a>'
+          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
         });
       }
 
@@ -204,10 +204,12 @@ export default {
       let playUrl = this.HOST + '/v1/restserver/ting?method=baidu.ting.song.play&songid=' +this.$route.params.song_id
       this.$axios.get(playUrl)
         .then(res => {
-          this.playData = res.data
-          this.imgObj.pic_huge = res.data.songinfo.pic_huge === "" ? res.data.songinfo.pic_small : res.data.songinfo.pic_huge
-          this.imgObj.pic_radio = res.data.songinfo.pic_radio
-          this.getAuthor(this.playData.songinfo.author,this.playData.songinfo.all_artist_ting_uid);
+          if(res.data.error_code===22000){
+            this.playData = res.data
+            this.imgObj.pic_huge = res.data.songinfo.pic_huge === "" ? res.data.songinfo.pic_small : res.data.songinfo.pic_huge
+            this.imgObj.pic_radio = res.data.songinfo.pic_radio
+            this.getAuthor(this.playData.songinfo.author,this.playData.songinfo.all_artist_ting_uid);
+          }
         }).catch(error => {
           console.warn(error);
       })
@@ -230,7 +232,7 @@ export default {
   //离开前 把当前正在播放的music传到外部
   beforeDestroy(){
     this.removeEventListeners()
-    if(this.$route.params.currentTime!==false){
+    if(this.$route.params.currentTime!==false && this.playData.songinfo.title){
       let music = {
            src: this.playData.bitrate.file_link,
          title: this.playData.songinfo.title,

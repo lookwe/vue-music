@@ -1,5 +1,5 @@
 <template>
-  <div class="logon" ref="logonBox" :style="longBoxStyle" style='background-image: url("http://i2.bvimg.com/677841/f16d0eb56d6302e5.jpg");'>
+  <div class="logon" ref="logonBox" :style="longBoxStyle" style='background-image: url("http://thyrsi.com/t6/675/1551429016x2728278692.jpg");'>
      <i class="el-icon-arrow-left" @click="$router.go('-1')"></i>
      <div class="slogan"></div>
      <div class="form-box">
@@ -35,10 +35,9 @@
       userPassword:false,
       winHeight:0,
       bcgImg:[
-          'http://i2.bvimg.com/677841/f16d0eb56d6302e5.jpg',
-          'http://i2.bvimg.com/677841/353706f6b0547971.jpg',
-          //'http://i2.bvimg.com/677841/1223d9baaefffdb8.png',
-           'http://i1.bvimg.com/677841/0188e34385a2ee4e.jpg'
+          'http://thyrsi.com/t6/675/1551429016x2728278692.jpg',
+          'http://thyrsi.com/t6/675/1551428753x2728278692.jpg',
+          'http://thyrsi.com/t6/675/1551429060x2728278692.jpg',
       ],
       formData:{
         name:'',
@@ -92,7 +91,7 @@
         lock: true,
         text: 'Loading',
         spinner: 'el-icon-loading',
-        background: 'rgba(0, 0, 0, 0.7)'
+        background: 'rgba(0, 0, 0, 0.6)'
       });
       let chideNode = ref.child(this.formData.name)
       chideNode.once('value').then(res =>{
@@ -102,7 +101,7 @@
             this.showMsg('登录成功','success');
             sessionStorage.setItem('user',res.val()['name']);
             let phone = res.val()['phone'];
-            sessionStorage.setItem('phone',(phone.slice(0, 3) + '****' + phone.slice(6, 10)));
+            sessionStorage.setItem('phone',(phone.slice(0, 3) + '****' + phone.slice(7, 11)));
             this.$router.push({name:'user'});
           }else {
             this.formData.password = '';

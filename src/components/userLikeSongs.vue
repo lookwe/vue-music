@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  export default {
+export default {
     name:'userLikeSongs',
     inject:['getAllMusic'],
     methods:{

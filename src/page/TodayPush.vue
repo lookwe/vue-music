@@ -13,20 +13,19 @@
 </template>
 
 <script>
-  import todayList from '../components/TodayList'
-  export default {
-    name:'TodayPush',
-    data(){
-      return {
-        todayData:[],
-        songId:'92'
-      }
-    },
-    components:{
-      todayList
+import todayList from '../components/TodayList'
+export default {
+  name:'TodayPush',
+  data(){
+    return {
+      todayData:[],
+      songId:'92'
     }
-
+  },
+  components:{
+    todayList
   }
+}
 </script>
 
 <style scoped>
@@ -34,5 +33,4 @@
   width: 100%;
  height: auto;
 }
-
 </style>

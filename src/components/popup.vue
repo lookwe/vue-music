@@ -9,23 +9,23 @@
 </template>
 
 <script>
-    export default {
-      name:'popup',
-      methods: {
-        hidePopup(){
-          this.popup.down = true;
-          this.popup.topUp = false;
-          setTimeout(() => {
-              this.popup.isShowPopup = false
-          }, 150)
-        }
-      },
-      props:{
-        popup:{
-          type:Object
-        }
-      }
+export default {
+  name:'popup',
+  methods: {
+    hidePopup(){
+      this.popup.down = true;
+      this.popup.topUp = false;
+      setTimeout(() => {
+          this.popup.isShowPopup = false
+      }, 150)
     }
+  },
+  props:{
+    popup:{
+      type:Object
+    }
+  }
+}
 </script>
 
 <style scoped>

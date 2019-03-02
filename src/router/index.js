@@ -1,16 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css' //这个样式必须引入
+
 import index from '@/page/index'
 import Hot from '../page/musiclist/Hot'
 import New from '../page/musiclist/New'
 import Classic from '../page/musiclist/Classic'
 import  play from '@/page/play/MusicPlay'
 
+NProgress.inc(0.2)
+NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false })
 
 Vue.use(Router)
 
-export default new Router({
-  mode: 'history',
+const router = new Router({
+  //mode: 'history',
   linkActiveClass :'linkActive',
   routes: [
     {
@@ -105,8 +111,8 @@ export default new Router({
       ]
     },
     {
-      path:'/logn',
-      name:'logn',
+      path:'/login',
+      name:'login',
       component:()=> import('@/page/logn')
     },
     {
@@ -114,7 +120,44 @@ export default new Router({
         name:'register',
       component:()=> import('@/page/user/register')
     },
-
-
-  ]
+    {
+      path:'*',
+      redirect:'/index'
+    }
+  ],
 })
+
+/*
+* to 即将去往的路由
+* form 当前离开的路由
+* next  进行通过的钩子函数 参数： 1无参数表示通过 2:false 中断当前导游 3:{path:'/'} 指定页面
+* */
+router.beforeEach((to,from,next) => {
+  NProgress.start()
+  next()
+})
+
+/*
+* 后置钩子
+* */
+router.afterEach((to,form) => {
+  NProgress.done()
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default router

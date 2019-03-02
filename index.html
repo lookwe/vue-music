@@ -14,6 +14,6 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>function bye(){document.querySelector('.el-message--info').style.display='none'}</script>
+    <script>function bye(){let info = document.querySelector('.el-message--info');info.parentNode.removeChild(info)}</script>
   </body>
 </html>

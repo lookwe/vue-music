@@ -15,7 +15,6 @@
           </li>
         </ul>
       </li>
-
     </ul>
   </div>
   <my-footer></my-footer>
@@ -83,8 +82,8 @@ export default {
 }
 .content .all_top .sub_top .song_img span{
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: .5rem;
+  right: .5rem;
   color: transparent;
   text-shadow: none;
   background-color: transparent;

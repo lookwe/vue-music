@@ -10,20 +10,20 @@
 <script>
 import musicList from '@/components/musicList'
 export default {
-    name:'Classic',
-    data(){
-        return {
-          billboard_type:'22'
-        }
-    },
-    methods:{
-      getmusic(obj){
-        this.$emit('get_music',obj)
-      }
-    },
-    components:{
-      musicList
-    },
+  name:'Classic',
+  data(){
+    return {
+      billboard_type:'22'
+    }
+  },
+  methods:{
+    getmusic(obj){
+      this.$emit('get_music',obj)
+    }
+  },
+  components:{
+    musicList
+  },
 }
 </script>
 

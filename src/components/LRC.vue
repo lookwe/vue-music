@@ -12,32 +12,31 @@
   export default {
   name:'LRC',
   data(){
-      return {
-         lrc:{},
-         arrayKey:[]
-      }
+    return {
+      lrc:{},
+      arrayKey:[]
+    }
   },
   props:{
-     currentTime:{
-       type:Number,
-       default:null
-     },
-     TotalTime:{
-       type:Number,
-       default:null
-     },
-     song_id:{
-       type:String,
-       default:''
-     }
-
+    currentTime:{
+      type:Number,
+      default:null
+    },
+    TotalTime:{
+      type:Number,
+      default:null
+    },
+    song_id:{
+      type:String,
+      default:''
+    }
    },
   computed:{
-     getKeys(){
-       for(let key in this.lrc){
-           this.arrayKey.push(key)
-       }
-     }
+    getKeys(){
+      for(let key in this.lrc){
+        this.arrayKey.push(key)
+      }
+    }
   },
   created(){
     let LRCUrl = this.HOST + "/v1/restserver/ting?method=baidu.ting.song.lry&songid="+this.song_id

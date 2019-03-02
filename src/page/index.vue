@@ -1,6 +1,5 @@
 <template>
   <div class="main">
-
     <searchnva></searchnva>
 
     <!--轮播图-->

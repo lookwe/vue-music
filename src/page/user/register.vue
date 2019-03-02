@@ -30,7 +30,7 @@
   </div>
 
   <div class="service" >
-    <p>已有账号？&nbsp;<router-link tag="span" to="/logn" style="color: brown">马上去登录</router-link></p>
+    <p>已有账号？&nbsp;<router-link tag="span" to="login" style="color: brown">马上去登录</router-link></p>
   </div>
 </div>
 </template>
@@ -41,7 +41,7 @@ export default {
   name:'register',
   data(){
     return {
-      topImg:'http://i1.bvimg.com/677841/7b08ae1832638829.jpg',
+      topImg:'http://thyrsi.com/t6/675/1551429556x2890173891.jpg',
       userName:false,
       userPassword:false,
       userPhone:false,
@@ -141,7 +141,7 @@ export default {
         error => {
           if (error === null){
             this.showMsg(`注册成功,名称:${this.formData.name} 来试试登录吧`,'success')
-            this.$router.push({path:'/logn'})
+            this.$router.push({path:'/login'})
           }else {
             this.showMsg('服务器暂时离家出走了...','warning')
           }

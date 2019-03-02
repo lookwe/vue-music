@@ -40,19 +40,19 @@ export default {
   },
   methods:{
     //接受子组件数据 把子组件的图片传地址传来
-    getImgSrc(val){
+    getImgSrc(val) {
       this.imgUrl = val;
     },
-    handler(){
+    handler() {
       const loading = this.$loading({
         lock: true,
         text: 'Loading',
         spinner: 'el-icon-loading',
         background: 'rgba(0, 0, 0, 0.6)'
       });
-      setTimeout(()=>{
+      setTimeout(() => {
         loading.close();
-      },300)
+      }, 300)
     },
   },
 }

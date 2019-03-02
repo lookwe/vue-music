@@ -13,7 +13,7 @@ export default {
   name:'Hot',
   data(){
     return {
-        billboard_type:'2'
+      billboard_type:'2'
     }
   },
   methods:{

@@ -1,7 +1,6 @@
 <template>
   <div>
-
-     <router-link
+    <router-link
        tag="div"
        :to="{name :'artist',params:{singer_id:searchData.artist[0].ting_uid || '2517'}}"
        class="album"
@@ -13,7 +12,7 @@
          </div>
      </router-link>
 
-     <div class="album" v-if="searchData.album[0].album_id !== undefined" @click="toAlbum(searchData.album[0].album_id)">
+    <div class="album" v-if="searchData.album[0].album_id !== undefined" @click="toAlbum(searchData.album[0].album_id)">
         <img  :src="searchData.album[0].pic_small" />
         <div class="album_info">
           <p class="album_name">专辑：<span v-html="searchData.album[0].title"></span></p>
@@ -21,14 +20,13 @@
         </div>
      </div>
 
-
-     <div class="song_list">
+    <div class="song_list">
        <ul class="th-songlist" v-for="(item,index) in searchData.song" :key="index" >
          <router-link tag="li" :to="{name:'play',params:{song_id:item.song_id}}" :key="index">
            <div class="content">
              <div class="song_name album_name">
                <span>{{item.title}} </span>&nbsp;
-               <img  src='http://i2.bvimg.com/677841/889e31e7d08f06d7t.jpg' width="14px"/>
+               <img  src='http://thyrsi.com/t6/675/1551429593x2890173891.png' width="14px"/>
              </div>
              <div class="txt">
                {{item.author}}
@@ -47,43 +45,43 @@
 </template>
 
 <script>
-    export default {
-        name:'searchList',
-        data(){
-          return {
-            searchData:{
-                song:[],
-              artist:[{author:undefined}],
-              album:[{album_id:undefined}],
-            },
-            ting_uid:'2517'
-          }
-        },
-        methods:{
-           toAlbum(album_id){
-             this.$router.push({name:'album',params:{album_id}})
-           },
-        },
-        created(){
-          let url = this.musicapi + `/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.search.merge&query=${this.$route.params.query}&page_size=20&page_no=0&type=0,1,2,5,7`
-          this.$axios.get(url)
-            .then(res =>{
-              if(res.data.error_code === 22000){
-                if(res.data.result.album_info.total > 0 ){
-                  this.searchData.album = res.data.result.album_info.album_list
-                }
-                if (res.data.result.artist_info.total > 0){
-                  this.searchData.artist = res.data.result.artist_info.artist_list
-                }
-                if(res.data.result.song_info.total > 0){
-                  this.searchData.song = res.data.result.song_info.song_list
-                }
-              }
-            }).catch(error =>{
-            console.warn(error);
-          })
-        }
+export default {
+  name:'searchList',
+  data(){
+    return {
+      searchData:{
+          song:[],
+        artist:[{author:undefined}],
+        album:[{album_id:undefined}],
+      },
+      ting_uid:'2517'
     }
+  },
+  methods:{
+    toAlbum(album_id){
+      this.$router.push({name:'album',params:{album_id}})
+    },
+  },
+  created(){
+    let url = this.musicapi + `/v1/restserver/ting?from=webapp_music&format=json&method=baidu.ting.search.merge&query=${this.$route.params.query}&page_size=20&page_no=0&type=0,1,2,5,7`
+    this.$axios.get(url)
+      .then(res =>{
+        if(res.data.error_code === 22000){
+          if(res.data.result.album_info.total > 0 ){
+            this.searchData.album = res.data.result.album_info.album_list
+          }
+          if (res.data.result.artist_info.total > 0){
+            this.searchData.artist = res.data.result.artist_info.artist_list
+          }
+          if(res.data.result.song_info.total > 0){
+            this.searchData.song = res.data.result.song_info.song_list
+          }
+        }
+      }).catch(error =>{
+        console.warn(error);
+    })
+  }
+}
 </script>
 
 <style scoped>

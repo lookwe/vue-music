@@ -25,25 +25,25 @@
 </template>
 
 <script>
-  export default {
-    name: 'slider',
-    data(){
-      return {
-        swiperOption: {
-          pagination: {
-            el: '.swiper-pagination',
-          },
-          /*是否拖动切换*/
-          loop: true,
-          /*自动切换*/
-          autoplay: {
-            delay: 1200,//1秒切换一次
-            disableOnInteraction: false,//用户操作后是否停止自动
-          },
-        }
+export default {
+  name: 'slider',
+  data(){
+    return {
+      swiperOption: {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        /*是否拖动切换*/
+        loop: true,
+        /*自动切换*/
+        autoplay: {
+          delay: 1200,//1秒切换一次
+          disableOnInteraction: false,//用户操作后是否停止自动
+        },
       }
     }
   }
+}
 </script>
 
 <style scoped>
