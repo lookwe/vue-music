@@ -7,7 +7,7 @@
 * vue-router&nbsp;&nbsp;&nbsp;**路由管理**
 * vue-aplayer&nbsp;&nbsp;**音乐播放组件**
 * element-ui&nbsp;&nbsp;&nbsp;**UI框架**
-* nprogress&nbsp;&nbsp;&nbsp; **轻量级web进度条提升用户友好**
+* nprogress&nbsp;&nbsp;&nbsp; **轻量级Web进度条提升用户友好性**
 * vue-lazyload&nbsp;&nbsp;**懒加载减少性能开销**
 * 野狗通信云&nbsp;&nbsp;**提供第三方实时通信服务**
 * 自定义组件&nbsp;&nbsp;&nbsp;**实现模块化开发**
