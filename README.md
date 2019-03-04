@@ -28,11 +28,13 @@
 
 &ensp;&ensp;6.**歌词同步**
 
-&ensp;&ensp;7.**歌曲分类**
+&ensp;&ensp;7.**下拉刷新**
 
-&ensp;&ensp;8.**歌手筛选**
+&ensp;&ensp;8.**歌曲分类**
 
-&ensp;&ensp;9.**歌曲排名...**
+&ensp;&ensp;9.**歌手筛选**
+
+&ensp;&ensp;10.**歌曲排名...**
 
 ![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
 
