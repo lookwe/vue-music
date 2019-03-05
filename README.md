@@ -13,7 +13,7 @@
 * element-ui&nbsp;&nbsp;&nbsp;**UI框架**
 * nprogress&nbsp;&nbsp;&nbsp; **轻量级Web进度条提升用户友好性**
 * vue-lazyload&nbsp;&nbsp;**懒加载减少性能开销**
-* 野狗通信云&nbsp;&nbsp;**提供第三方实时通信服务**
+* 野狗通信云&nbsp;&nbsp;**提供第三方实时通信引擎**
 * 自定义组件&nbsp;&nbsp;&nbsp;**实现模块化开发**
 #### 项目功能
 &ensp;&ensp;1.**登录**
@@ -28,11 +28,13 @@
 
 &ensp;&ensp;6.**歌词同步**
 
-&ensp;&ensp;7.**歌曲分类**
+&ensp;&ensp;7.**下拉刷新**
 
-&ensp;&ensp;8.**歌手筛选**
+&ensp;&ensp;8.**歌曲分类**
 
-&ensp;&ensp;9.**歌曲排名...**
+&ensp;&ensp;9.**歌手筛选**
+
+&ensp;&ensp;10.**歌曲排名...**
 
 ![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
 
