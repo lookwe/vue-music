@@ -6,15 +6,15 @@
 ---
 
 #### 技术栈
-* Vue2.5&nbsp;&nbsp;&nbsp;**控制数据及视图**
+* Vue2.5&nbsp;&nbsp;&nbsp;**数据驱动视图**
 * axios&nbsp;&nbsp;&nbsp;&nbsp;**网络请求数据**
-* vue-router&nbsp;&nbsp;&nbsp;**路由管理**
+* vue-router&nbsp;&nbsp;&nbsp;**路由管理全局守卫**
 * vue-aplayer&nbsp;&nbsp;**音乐播放组件**
 * element-ui&nbsp;&nbsp;&nbsp;**UI框架**
 * nprogress&nbsp;&nbsp;&nbsp; **轻量级Web进度条提升用户友好性**
 * vue-lazyload&nbsp;&nbsp;**懒加载减少性能开销**
 * 野狗通信云&nbsp;&nbsp;**提供第三方实时通信引擎**
-* 自定义组件&nbsp;&nbsp;&nbsp;**实现模块化开发**
+* 自定义组件&nbsp;&nbsp;&nbsp;**实现组件化开发**
 #### 项目功能
 &ensp;&ensp;1.**登录**
 
