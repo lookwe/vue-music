@@ -41,7 +41,7 @@ export default {
   name:'register',
   data(){
     return {
-      topImg:'http://feifei.ink/register-bg.jpg',
+      topImg: require('@/assets/imgage/register-bg.jpg'),
       userName:false,
       userPassword:false,
       userPhone:false,

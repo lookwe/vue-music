@@ -1,5 +1,5 @@
 <template>
-  <div class="logon" ref="logonBox" :style="longBoxStyle" style='background-image: url("http://feifei.ink/login-bg1.jpg");'>
+  <div class="logon" ref="logonBox" :style="longBoxStyle">
      <i class="el-icon-arrow-left" @click="$router.go('-1')"></i>
      <div class="slogan"></div>
      <div class="form-box">
@@ -35,9 +35,9 @@
       userPassword:false,
       winHeight:0,
       bcgImg:[
-          'http://feifei.ink/login-bg1.jpg',
-          'http://feifei.ink/login-bg2.jpg',
-          'http://feifei.ink/login-bg3.jpg',
+        require('@/assets/imgage/login-bg1.jpg'),
+        require('@/assets/imgage/login-bg2.jpg'),
+        require('@/assets/imgage/login-bg3.jpg'),
       ],
       formData:{
         name:'',
@@ -140,7 +140,7 @@
   computed:{
     longBoxStyle(){
       this.winHeight = window.innerHeight;
-      return 'height:'+this.winHeight+'px;width:100%;'
+      return 'height:'+this.winHeight+'px;width:100%;background-image: url('+ this.bcgImg[0] +');'
     }
   },
   mounted(){

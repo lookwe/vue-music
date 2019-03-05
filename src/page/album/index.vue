@@ -51,7 +51,7 @@
                 <div class="info">
                   <div class="line1">
                     <span class="name">{{item.title}}</span>&nbsp;
-                    <img v-lazy='"http://feifei.ink/sq.png"' width="14px"/>
+                    <img src='../../assets/imgage/sq.png' width="14px"/>
                   </div>
                   <span class="author">{{item.author}}</span>
                 </div>
@@ -86,7 +86,7 @@
         defaultIcon:'el-icon-star-off',
         likeList:[],
         user:sessionStorage.user,
-        defaultImg:require("@/assets/imgage/error.jpg")
+        defaultImg:require("@/assets/imgage/error.jpg"),
       }
     },
     components: {
