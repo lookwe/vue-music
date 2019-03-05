@@ -51,7 +51,7 @@
                 <div class="info">
                   <div class="line1">
                     <span class="name">{{item.title}}</span>&nbsp;
-                    <img v-lazy='"http://thyrsi.com/t6/675/1551429593x2890173891.png"' width="14px"/>
+                    <img v-lazy='"http://feifei.ink/sq.png"' width="14px"/>
                   </div>
                   <span class="author">{{item.author}}</span>
                 </div>

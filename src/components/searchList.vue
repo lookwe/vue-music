@@ -26,7 +26,7 @@
            <div class="content">
              <div class="song_name album_name">
                <span>{{item.title}} </span>&nbsp;
-               <img  src='http://thyrsi.com/t6/675/1551429593x2890173891.png' width="14px"/>
+               <img v-lazy='"http://feifei.ink/sq.png"' width="14px"/>
              </div>
              <div class="txt">
                {{item.author}}

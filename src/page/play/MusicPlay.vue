@@ -150,8 +150,7 @@ export default {
           center: true,
           showClose: true,
           duration:'2000',
-          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://localhost:8080/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
-          /*http://feifei.ink/#/login*/
+          message: '<span>没登录?</span> <a style="color:#2177C7;font-size: 1.5rem;" onclick="bye()" href="http://feifei.ink/#/login">去登陆吧(´･･)ﾉ(._.`)</a>'
         });
       }
     },
