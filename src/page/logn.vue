@@ -1,5 +1,5 @@
 <template>
-  <div class="logon" ref="logonBox" :style="longBoxStyle" style='background-image: url("http://thyrsi.com/t6/675/1551429016x2728278692.jpg");'>
+  <div class="logon" ref="logonBox" :style="longBoxStyle" style='background-image: url("http://feifei.ink/login-bg1.jpg");'>
      <i class="el-icon-arrow-left" @click="$router.go('-1')"></i>
      <div class="slogan"></div>
      <div class="form-box">
@@ -35,9 +35,9 @@
       userPassword:false,
       winHeight:0,
       bcgImg:[
-          'http://thyrsi.com/t6/675/1551429016x2728278692.jpg',
-          'http://thyrsi.com/t6/675/1551428753x2728278692.jpg',
-          'http://thyrsi.com/t6/675/1551429060x2728278692.jpg',
+          'http://feifei.ink/login-bg1.jpg',
+          'http://feifei.ink/login-bg2.jpg',
+          'http://feifei.ink/login-bg3.jpg',
       ],
       formData:{
         name:'',
