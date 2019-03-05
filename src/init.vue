@@ -16,7 +16,7 @@ export default {
   watch:{
     $route(to,from){
       if(from.name === 'login'){
-        if(this.cutter==='register'){
+        if(this.cutter === 'register' && from.name !== 'register'){
           this.$router.push({name:'user'})
           //失效
           delete this.cutter

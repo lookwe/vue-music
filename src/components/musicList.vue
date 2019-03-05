@@ -29,7 +29,7 @@
             <div class="info">
               <div class="line1">
                 <span class="name">{{item.title}}</span>
-                <i class="iconfont icon-sq"  style="font-size: 23px;color: #E03229"></i>
+                <img src='../assets/imgage/sq.png' width="14px"/>
               </div>
               <span class="author">{{item.author}}</span>
             </div>
@@ -308,6 +308,9 @@ export default {
   .th-songlist .th-songlist-item .info .line1 {
     min-height: 20px;
 
+  }
+  .th-songlist-item .info .line1 img{
+    margin-top: -1rem;
   }
   .th-songlist .th-songlist-item .info .name {
     max-width: 88%;

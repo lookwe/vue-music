@@ -35,9 +35,9 @@
       userPassword:false,
       winHeight:0,
       bcgImg:[
-        require('@/assets/imgage/login-bg1.jpg'),
-        require('@/assets/imgage/login-bg2.jpg'),
-        require('@/assets/imgage/login-bg3.jpg'),
+        'http://feifei.ink/static/img/login-bg1.ee100e6.jpg',
+        'http://feifei.ink/static/img/login-bg2.27df159.jpg',
+        'http://feifei.ink/static/img/login-bg3.5eff1b8.jpg',
       ],
       formData:{
         name:'',

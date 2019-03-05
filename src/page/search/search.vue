@@ -371,8 +371,9 @@ export default {
     height: 100%;
   }
   .input—search_list ul li{
-    text-overflow: ellipsis;
     white-space: nowrap;
+    text-overflow: ellipsis;
+
     overflow: hidden;
     width: 89%;
     padding: 0 20px;
@@ -381,6 +382,7 @@ export default {
   }
   .input—search_list ul li span{
     padding-right: 15px;
+
   }
   .input—search_list ul li .type{
     color: #999;

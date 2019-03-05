@@ -22,6 +22,7 @@
               <div class="info">
                 <div class="line1">
                   <span  class="name">{{item.title}}</span>
+                  <img src='../assets/imgage/sq.png' width="14px"/>
                   <i></i>
                 </div>
                 <span class="author">{{item.author}}</span>
@@ -183,7 +184,9 @@ export default {
   }
   .th-songlist .th-songlist-item .info .line1 {
     min-height: 20px;
-
+  }
+  .line1 img{
+    margin-top: -1rem;
   }
   .th-songlist .th-songlist-item .info .name {
     max-width: 88%;
@@ -191,7 +194,7 @@ export default {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
-    font-size: 15.5px;
+    font-size: 14.5px;
     color: #333;
   }
   .th-songlist .th-songlist-item .info .author {

@@ -2,7 +2,7 @@
 <div id="register" :style="longBoxStyle">
   <div class="top-img">
     <img v-lazy="topImg">
-    <i class="el-icon-arrow-left" @click="$router.go('-1')"></i>
+    <i class="el-icon-arrow-left" @click="$router.push({path:'/login'})"></i>
   </div>
   <div class="form-box">
     <div class="form-input user-phone">
@@ -41,7 +41,7 @@ export default {
   name:'register',
   data(){
     return {
-      topImg: require('@/assets/imgage/register-bg.jpg'),
+      topImg:'http://feifei.ink/static/img/register-bg.8721172.jpg',
       userName:false,
       userPassword:false,
       userPhone:false,
@@ -140,6 +140,7 @@ export default {
         this.formData,
         error => {
           if (error === null){
+            sessionStorage.user = this.formData.name
             this.showMsg(`注册成功,名称:${this.formData.name} 来试试登录吧`,'success')
             this.$router.push({path:'/login'})
           }else {
