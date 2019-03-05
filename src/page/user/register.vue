@@ -41,7 +41,7 @@ export default {
   name:'register',
   data(){
     return {
-      topImg:'http://thyrsi.com/t6/675/1551429556x2890173891.jpg',
+      topImg:'http://feifei.ink/register-bg.jpg',
       userName:false,
       userPassword:false,
       userPhone:false,
@@ -148,7 +148,6 @@ export default {
         }
       )
     }
-
   },
   beforeDestroy(){
     this.$emit('cutter','register')
