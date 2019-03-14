@@ -6,15 +6,15 @@
 ---
 
 #### 技术栈
-* Vue2.5&nbsp;&nbsp;&nbsp;**用于构建用户界面的 MVVM 框架、数据驱动视图**
-* axios&nbsp;&nbsp;&nbsp;&nbsp;**用来请求网络请求后端 API 音乐数据**
-* vue-router&nbsp;&nbsp;&nbsp;**为单页面应用提供的路由系统 使用了 Lazy Loading Routes 技术来实现异步加载优化性能**
-* vue-aplayer&nbsp;&nbsp;**音乐播放组件，实现全局共享音乐**
-* element-ui&nbsp;&nbsp;&nbsp;**UI框架布局，使用简单图标，弹框**
-* nprogress&nbsp;&nbsp;&nbsp; **轻量级Web进度条提升用户友好性**
-* vue-lazyload&nbsp;&nbsp;**节省用户流量，优化页面加载速度，减低性能开销**
-* 野狗通信云&nbsp;&nbsp;**提供第三方实时通信引擎服务，记录用户数据**
-* 自定义组件&nbsp;&nbsp;&nbsp;**实现组件化开发，全局享用**
+* Vue2.5&nbsp;&nbsp;&nbsp;&nbsp; **用于构建用户界面的 MVVM 框架、数据驱动视图**
+* axios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **用来请求网络请求后端 API 音乐数据**
+* vue-router&nbsp;&nbsp;&nbsp;&nbsp; **为单页面应用提供的路由系统 使用了 Lazy Loading Routes 技术来实现异步加载优化性能**
+* vue-aplayer&nbsp;&nbsp;&nbsp; **音乐播放组件，实现全局共享音乐**
+* element-ui&nbsp;&nbsp;&nbsp;&nbsp; **UI框架布局，使用简单图标，弹框**
+* nprogress&nbsp;&nbsp;&nbsp;&nbsp; **轻量级Web进度条提升用户友好性**
+* vue-lazyload&nbsp;&nbsp;&nbsp; **节省用户流量，优化页面加载速度，减低性能开销**
+* 野狗通信云&nbsp;&nbsp;&nbsp; **提供第三方实时通信引擎服务，记录用户数据**
+* 自定义组件&nbsp;&nbsp;&nbsp;&nbsp; **实现组件化开发，全局享用**
 #### 项目功能
 &ensp;&ensp;1.**用户登录 --完成**
 
@@ -38,7 +38,7 @@
 
 &ensp;&ensp;11.**歌曲排名 --完成**
 
-#### **部分页面展示(查看所有页面观看网站)**
+#### **部分页面展示(查看所有页面请[观看网站](http://feifei.ink))**
 #### **首页、播放页面**
 
 ![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
@@ -46,7 +46,7 @@
 #### **搜索页面、我的页面**
 ![图片](https://img-blog.csdnimg.cn/2019031419164298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzg3ODgy,size_16,color_FFFFFF,t_70)![图片](https://img-blog.csdnimg.cn/20190314190949920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzg3ODgy,size_16,color_FFFFFF,t_70)
 
-### 总结
+### 最后总结
 ---
 1、因为不是百度音乐官方(千千音乐),在一些接口数据上并不是很齐全，比如获取歌单,KTV,歌曲MV,歌手演出,不过后期我会收集数据并搭建后端服务完成，目前数据库已经开始设计。
 
@@ -60,13 +60,12 @@
 
 6、通过学习开发一个 Vue 多功能项目，让自己更熟练的使用 Vue框架、模块化开发、ES6/7 等等知识，提高自己的技术能力。
 
-### Build Setup
+---
 
 ### install dependencies
 ```
 npm install
 ```
-
 
 ### serve with hot reload at localhost:8080
 ```
@@ -78,7 +77,3 @@ npm run dev
 npm run build
 ```
 
-### build for production and view the bundle analyzer report
-```
-npm run build --report
-```
