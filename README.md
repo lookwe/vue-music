@@ -22,9 +22,9 @@
 
 &ensp;&ensp;3.**搜索**
 
-&ensp;&ensp;4.**收藏**
+&ensp;&ensp;4.**播放**
 
-&ensp;&ensp;5.**播放**
+&ensp;&ensp;5.**下载收藏**
 
 &ensp;&ensp;6.**歌词同步**
 
