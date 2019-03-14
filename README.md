@@ -37,11 +37,11 @@
 &ensp;&ensp;10.**歌曲排名...**
 
 #### **部分页面**
-&ensp;&ensp;#### **首页、播放页面**
+#### **首页、播放页面**
 
 ![图片](http://thyrsi.com/t6/675/1551432964x2890174040.png)![图片](http://thyrsi.com/t6/675/1551433035x2890174040.png)
 
-&ensp;&ensp;#### **搜索页面、我的页面**
+#### **搜索页面、我的页面**
 ![图片](https://img-blog.csdnimg.cn/2019031419164298.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzg3ODgy,size_16,color_FFFFFF,t_70)![图片](https://img-blog.csdnimg.cn/20190314190949920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzg3ODgy,size_16,color_FFFFFF,t_70)
 
 
