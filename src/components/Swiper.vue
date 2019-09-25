@@ -5,10 +5,10 @@
             <img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_1540351085b6c4e718aa521fc616df0429472b10f7.jpg">
           </swiper-slide>
           <swiper-slide >
-            <img src="http://feifei.ink/static/img/b2.62f5f7f.jpg">
+            <img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_15692289157cbb6a968f6564f53167044039c527c4.jpg@s_2,w_750,h_300">
           </swiper-slide>
           <swiper-slide>
-            <img src="http://feifei.ink/static/img/b3.ecfe70f.jpg">
+            <img src="http://p1.music.126.net/BVLBXwf1c-Id6-d9HfSs0g==/109951164385005476.jpg">
           </swiper-slide>
           <swiper-slide>
             <img src="http://business.cdn.qianqian.com/qianqian/pic/bos_client_154038645548ca3213997492c4a66ec08d27b4aafd.jpg">

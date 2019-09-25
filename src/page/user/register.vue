@@ -41,7 +41,7 @@ export default {
   name:'register',
   data(){
     return {
-      topImg:'http://feifei.ink/static/img/register-bg.8721172.jpg',
+      topImg:'http://feifei.ink/img/register-bg.jpg',
       userName:false,
       userPassword:false,
       userPhone:false,

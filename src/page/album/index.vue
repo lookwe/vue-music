@@ -1,5 +1,4 @@
 <template>
-  <lazy-component @show="handler">
     <div id="album">
       <search-nva></search-nva>
       <div class="top-box">
@@ -68,7 +67,6 @@
       </div>
       <my-footer></my-footer>
     </div>
-  </lazy-component>
 </template>
 
 <script>
@@ -101,17 +99,6 @@
           console.log('%chttp://feifei.ink\n-------------\nQQ交流群(一):950266367,  QQ交流群(二):147076513,  作者QQ:2726768601', 'color:#009a61');
           console.groupEnd();
         }
-      },
-      handler(){
-        const loading = this.$loading({
-          lock: true,
-          text: 'Loading',
-          spinner: 'el-icon-loading',
-          background: 'rgba(0, 0, 0, 0.5)'
-        });
-        setTimeout(()=>{
-          loading.close();
-        },300)
       },
       //播放所有
       getMusicIds(){

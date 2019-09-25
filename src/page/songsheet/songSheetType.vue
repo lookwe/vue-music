@@ -1,5 +1,4 @@
 <template>
-  <lazy-component @show="handler">
     <div>
       <!--nav功能选项-->
       <searchnva></searchnva>
@@ -17,7 +16,6 @@
         </musicList>
       </div>
     </div>
-  </lazy-component>
 </template>
 
 <script>
@@ -42,17 +40,6 @@ export default {
     //接受子组件数据 把子组件的图片传地址传来
     getImgSrc(val) {
       this.imgUrl = val;
-    },
-    handler() {
-      const loading = this.$loading({
-        lock: true,
-        text: 'Loading',
-        spinner: 'el-icon-loading',
-        background: 'rgba(0, 0, 0, 0.6)'
-      });
-      setTimeout(() => {
-        loading.close();
-      }, 300)
     },
   },
 }
